@@ -1,0 +1,17 @@
+.contentTask{
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    height: fit-content;
+    padding: 5px;
+    box-shadow: 2px 2px 7px #BBB8B2;
+}
+
+.title{
+    color: #2E2E3A;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.descrip{
+    color: #2E2E3A;
+}

@@ -1,9 +1,11 @@
-
+import Task from "../../components/Task/Task";
+import styleHome from './PagesHome.module.css';
 
 export default function PagesHome(){
     return(
-        <>
-            <h1>pagina uno</h1>
-        </>
+        <section className={styleHome.contentSec}>
+            <h1 className={styleHome.title}>Lista</h1>
+            <Task />
+        </section>
     )
 }

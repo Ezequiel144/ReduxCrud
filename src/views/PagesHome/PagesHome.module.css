@@ -1,0 +1,12 @@
+.contentSec{
+    padding: 25px 50px;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'roboto';
+    text-transform: uppercase;
+    color: #2E2E3A;
+    margin: 0 0 20px 0;
+}
