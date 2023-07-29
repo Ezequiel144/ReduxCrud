@@ -12,9 +12,9 @@ export default function Footer(){
             <article className={styleFooter.byCreate}>
                 <p>Creado por <Link to={''}>Ezequiel Garcia</Link></p>
             </article>
-            <article className={styleFooter.imgGitContent}>
+            <a className={styleFooter.imgGitContent} href='https://github.com/Ezequiel144?tab=repositories'>
                 <img className={styleFooter.imgGit} src={imgGit} alt='imgGit'/>
-            </article>
+            </a>
         </footer>
     )
 }
