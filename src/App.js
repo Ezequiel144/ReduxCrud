@@ -14,6 +14,7 @@ function App() {
         <Route path='/' Component={PagesHome}/>
         <Route path='/agregar' Component={PagesAgregar} />
         <Route path='/modificar' Component={PagesModificar} />
+        <Route path='/:idtask' Component={}/>
       </Routes>
       <Footer />
     </BrowserRouter>
