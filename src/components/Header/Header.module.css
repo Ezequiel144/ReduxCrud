@@ -18,5 +18,15 @@
 .link{
     text-decoration: none;
     color: white;
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1.3px;
+}
+
+.link:hover{
+    color: #2E2E3A;
+}
+
+.active{
+    color: #2E2E3A;
 }

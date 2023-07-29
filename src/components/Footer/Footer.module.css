@@ -1,0 +1,23 @@
+.conterFooter{
+    background-color: #F34213;
+    color: white;
+    height: 100px;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.byCreate{
+    text-align: center;
+}
+
+.imgGitContent{
+    height: 40px;
+    width: 40px;
+}
+
+.imgGit{
+    width: 100%;
+    cursor: pointer;
+}

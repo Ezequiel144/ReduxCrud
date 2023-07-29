@@ -5,7 +5,15 @@ export default function PagesHome(){
     return(
         <section className={styleHome.contentSec}>
             <h1 className={styleHome.title}>Lista</h1>
-            <Task />
+            <article className={styleHome.contentTaskList}>
+                <Task />
+                <Task />
+                <Task />
+                <Task />
+                <Task />
+                <Task />
+                <Task />
+            </article>
         </section>
     )
 }
