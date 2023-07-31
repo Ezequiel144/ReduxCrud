@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter,Route,Router,Routes } from 'react-router-dom';
 import PagesHome from './views/PagesHome/PagesHome';
 import Header from './components/Header/Header';
-import PagesAgregar from './views/PagesAgregar/PagesAgregar';
-import PagesModificar from './views/PagesModificar/PagesModificar';
+import PagesAgregar from './views/PagesAdd/PagesAdd';
+import PagesModificar from './views/PagesEdit/PagesEdit';
 import Footer from './components/Footer/Footer';
 import PagesTaskDetails from './views/PagesTaskDetails/PagesTaskDetails';
 

@@ -35,9 +35,9 @@ function Details({title,descrip,textLarge,img}){
                 <p className={styleDetails.descrip}>{descrip}</p>
             </article>
             <article className={styleDetails.contentTextImg}>
-                <section className={styleDetails.sizeImg}>
+                {/* <section className={styleDetails.sizeImg}>
                     <img className={styleDetails.imagen} src={img} alt={img} />
-                </section>
+                </section> */}
                 <p className={styleDetails.textLarge}>{textLarge}</p>
             </article>
 
