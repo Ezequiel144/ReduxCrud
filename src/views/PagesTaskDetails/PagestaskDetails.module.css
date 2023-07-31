@@ -1,0 +1,52 @@
+.contentDetails{
+    padding: 25px 50px;
+    height: 100vh;
+    color: #2E2E3A;
+}
+
+.contentTitleDescrip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #2E2E3A;
+}
+
+.title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.descrip{
+    font-family: 'roboto';
+}
+
+.contentTextImg{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid blue; */
+    color: #2E2E3A;
+}
+
+.sizeImg{
+    width: 35%;
+    max-width: 25%;
+}
+
+.imagen{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.imagen:hover{
+    filter: brightness(80%);
+}
+
+.textLarge{
+    /* border: 1px solid red; */
+    width: 65%;
+    padding: 2px 25px;
+    font-size: 1.2rem;
+}
