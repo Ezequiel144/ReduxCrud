@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import PagesAgregar from './views/PagesAgregar/PagesAgregar';
 import PagesModificar from './views/PagesModificar/PagesModificar';
 import Footer from './components/Footer/Footer';
+import PagesTaskDetails from './views/PagesTaskDetails/PagesTaskDetails';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path='/' Component={PagesHome}/>
         <Route path='/agregar' Component={PagesAgregar} />
         <Route path='/modificar' Component={PagesModificar} />
-        <Route path='/:idtask' Component={}/>
+        <Route path='/:idtask' Component={PagesTaskDetails}/>
       </Routes>
       <Footer />
     </BrowserRouter>

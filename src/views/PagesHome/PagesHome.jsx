@@ -10,9 +10,11 @@ export default function PagesHome(){
                 {
                     taskList.map(data => {
                         return(
-                            <Task 
+                            <Task
+                                key={data.id} 
                                 title = {data.title}
                                 descrip = {data.descrip}
+                                id={data.id}
                             />
                         )
                     })

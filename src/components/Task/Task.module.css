@@ -7,6 +7,7 @@
     width: 250px;
     color: #2E2E3A;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 .contentTask:hover{
