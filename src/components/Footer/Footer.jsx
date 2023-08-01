@@ -7,7 +7,7 @@ export default function Footer(){
         <footer className={styleFooter.conterFooter}>
             <article>
                 <h1>My App</h1>
-                <p>&copy; 2021 MyApp.</p>
+                <p>&copy; 2023 MyApp.</p>
             </article>
             <article className={styleFooter.byCreate}>
                 <p>Creado por <Link to={''}>Ezequiel Garcia</Link></p>

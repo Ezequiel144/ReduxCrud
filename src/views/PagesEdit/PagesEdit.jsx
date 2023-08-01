@@ -1,4 +1,3 @@
-import Task from "../../components/Task/Task";
 import styleEdit from "./PagesEdit.module.css";
 
 export default function PagesModificar(){

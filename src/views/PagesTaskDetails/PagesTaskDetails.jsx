@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import taskList from "../../components/Data/DataList.js";
 import styleDetails from "./PagestaskDetails.module.css"
+import { useSelector } from "react-redux"; 
 
 export default function PagesTaskDetails(){
     const {idtask} = useParams();
 
-    const [task,setTask] = useState(taskList);
+    const [task,setTask] = useState(useSelector(state => state.tasks));
 
+    
     useEffect(()=>{
         setTask(task.find(t => t.id === parseInt(idtask)))
         /* console.log("ID Tarea: ", idtask) */

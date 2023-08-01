@@ -1,6 +1,10 @@
 .contentSec{
     padding: 25px 50px;
     height: 100vh;
+    background-image: url('../../asset//12230268_4931029.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title{
