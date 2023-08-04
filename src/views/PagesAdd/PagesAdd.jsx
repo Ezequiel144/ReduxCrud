@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styleAdd from "./PagesAdd.module.css";
+import { addTask } from "../../redux-toolkit/features/tasks/TaskSlice";
+import { useDispatch,useSelector } from "react-redux";
 
 export default function PagesAgregar(){
     return(
@@ -14,31 +16,43 @@ export default function PagesAgregar(){
 
 
 function Formulary(){
+    let stateLenght = useSelector(state => state.tasks);
     const [form,setForm] = useState({});
 
     function handleChange(e){
         /* console.log(e.target.name,e.target.value); */
         setForm(
-            {...form,[ e.target.name ] :  e.target.value },
+            {...form,
+                id: stateLenght.length,
+                [ e.target.name ] :  e.target.value
+            },
+            /* [...form,{id: {stateLenght}}], */
         )
     }
 
-    function handleChangeSend(e){
+    const dispatch = useDispatch();
+
+    function handleSubmit(e){
+        console.log(form);
+        if(form === null){
+            alert("vario");
+        }
+        dispatch(addTask(form));
         e.preventDefault();
     }
 
-    console.log(form);
+    /* console.log(form); */
 
     return(
-        <form className={styleAdd.contentFrom} onChange={handleChangeSend}>
+        <form className={styleAdd.contentFrom} onSubmit={handleSubmit}>
             <label>
-                Titulo: <input name="titulo" type="text" maxLength={25} onChange={handleChange}/>
+                Titulo: <input name="title" type="text" maxLength={20} onChange={handleChange}/>
             </label>
             <label>
-                Breve Descripcion: <input name="descripcion" type="text" maxLength={45} onChange={handleChange}/> 
+                Breve Descripcion: <input name="descrip" type="text" maxLength={30} onChange={handleChange}/> 
             </label>
             <label>
-                    Describir Tarea: <textarea name="texto largo" type="text" onChange={handleChange}/>
+                    Describir Tarea: <textarea name="textLarge" type="text" onChange={handleChange}/>
             </label>
                 {/* <label htmlFor="">
                     imagen: <input type="file" />

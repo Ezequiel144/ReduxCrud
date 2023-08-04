@@ -7,3 +7,20 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'roboto';
+    text-transform: uppercase;
+    color: #2E2E3A;
+    margin: 0 0 20px 0;
+}
+
+.contentTaskEdit{
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    grid-auto-rows: 5rem;
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+}

@@ -11,7 +11,7 @@ export default function PagesTaskDetails(){
     
     useEffect(()=>{
         setTask(task.find(t => t.id === parseInt(idtask)))
-        /* console.log("ID Tarea: ", idtask) */
+        console.log("ID Tarea: ", idtask)
     },[idtask]);
 
     

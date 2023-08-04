@@ -4,13 +4,20 @@ import styleHome from './PagesHome.module.css';
 import { useSelector } from "react-redux";
 
 export default function PagesHome(){
-    const stateTask = useSelector(state => state.tasks);
-    console.log(stateTask);
-
     return(
         <section className={styleHome.contentSec}>
             <h1 className={styleHome.title}>Lista</h1>
-            <article className={styleHome.contentTaskList}>
+            <TaskShow />
+        </section>
+    )
+}
+
+export function TaskShow(){
+    const stateTask = useSelector(state => state.tasks);
+    /* console.log(stateTask); */
+
+    return(
+        <article className={styleHome.contentTaskList}>
                 {
                     stateTask.map(data => {
                         return(
@@ -23,7 +30,6 @@ export default function PagesHome(){
                         )
                     })
                 }
-            </article>
-        </section>
+        </article>
     )
 }
