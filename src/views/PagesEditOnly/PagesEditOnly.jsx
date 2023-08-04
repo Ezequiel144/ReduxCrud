@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import styleOnly from "./PagesEditOnly.module.css";
 import { useEffect,useState } from "react";
 import { useSelector } from "react-redux";
+import OnlyEdit from "../../components/OnlyEdit/OnlyEdit";
 
 
 export default function PagesEditOnly(){
@@ -18,11 +19,11 @@ export default function PagesEditOnly(){
 
     return(
         <section className={styleOnly.contentEdit}>
-            <h1>modificar solo individualmente</h1>
-            <p>titulo: {task.title}</p>
-            <p>decrip: {task.descrip}</p>
-            <p>id: {task.id}</p>
-            <p>texto largo: {task.textLarge}</p>
+            <OnlyEdit 
+                title={task.title}
+                descrip={task.descrip}
+                textLarge={task.textLarge}
+            />
         </section>
     )
 }
