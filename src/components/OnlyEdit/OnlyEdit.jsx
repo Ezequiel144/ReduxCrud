@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styleOnly from "./OnlyEdit.module.css";
+import { Link } from "react-router-dom";
 
 export default function OnlyEdit({title,descrip,textLarge}){
     
@@ -18,26 +19,26 @@ export default function OnlyEdit({title,descrip,textLarge}){
                     <p>decrip: {descrip}</p>
                 </article>
                 <article className={styleOnly.contentEditor}>
-                    <p>texto largo: {textLarge}</p>
+                    <p className={styleOnly.text}>texto largo: {textLarge}</p>
                 </article>
                 
                 <button className={styleOnly.boton} onClick={()=>{setEdit(false)}}>editar</button>
-            
+                <Link className={styleOnly.botonBack} to={'/modificar'}>volver</Link>
             </article>
         )
     }else{
         contentInfo = (
             <article className={styleOnly.contentOnly}>    
                 <article className={styleOnly.contentEditor}>
-                    <p>titulo:</p>
+                    <p className={styleOnly.textTitle}>titulo:</p>
                     <input className={styleOnly.inputData} type="text" />
                 </article>    
                 <article className={styleOnly.contentEditor}>
-                    <p>decrip:</p>
+                    <p className={styleOnly.textTitle}>decrip:</p>
                     <input className={styleOnly.inputData} type="text" />
                 </article>
                 <article className={styleOnly.contentEditor}>
-                    <p>texto largo:</p>
+                    <p className={styleOnly.textTitle}>texto largo:</p>
                     <textarea className={styleOnly.inputData} type="text" />
                 </article>
                 <button className={styleOnly.boton} onClick={()=>{setEdit(true)}}>cancelar</button>

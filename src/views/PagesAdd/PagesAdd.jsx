@@ -3,6 +3,7 @@ import styleAdd from "./PagesAdd.module.css";
 import { addTask } from "../../redux-toolkit/features/tasks/TaskSlice";
 import { useDispatch,useSelector } from "react-redux";
 
+
 export default function PagesAgregar(){
     return(
         <section className={styleAdd.contentAdd}>
@@ -20,28 +21,31 @@ function Formulary(){
     const [form,setForm] = useState({});
 
     function handleChange(e){
-        /* console.log(e.target.name,e.target.value); */
         setForm(
             {...form,
                 id: stateLenght.length,
                 [ e.target.name ] :  e.target.value
             },
-            /* [...form,{id: {stateLenght}}], */
         )
     }
+    /* const initialForm = {
+        id: null,title:"", descrip:'',textLarge:''
+    }
+
+    const { formState, handleChange } = useForm(initialForm);
+
+    const { title,descrip,textLarge } = formState; */
 
     const dispatch = useDispatch();
 
     function handleSubmit(e){
-        console.log(form);
+        /* console.log(formState); */
         if(form === null){
             alert("vario");
         }
         dispatch(addTask(form));
         e.preventDefault();
     }
-
-    /* console.log(form); */
 
     return(
         <form className={styleAdd.contentFrom} onSubmit={handleSubmit}>
@@ -52,7 +56,7 @@ function Formulary(){
                 Breve Descripcion: <input name="descrip" type="text" maxLength={30} onChange={handleChange}/> 
             </label>
             <label>
-                    Describir Tarea: <textarea name="textLarge" type="text" onChange={handleChange}/>
+                Describir Tarea: <textarea name="textLarge" type="text" onChange={handleChange}/>
             </label>
                 {/* <label htmlFor="">
                     imagen: <input type="file" />
