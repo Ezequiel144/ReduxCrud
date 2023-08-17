@@ -19,7 +19,7 @@ function App() {
           <Route path='/modificar' Component={PagesModificar} />
           <Route path='/modificar/:idmod' Component={PagesEditOnly}/>
           <Route path='/:idtask' Component={PagesTaskDetails}/>
-          <Route path='*' Component={PagesError} />
+          <Route path='/*' Component={PagesError} />
         </Routes>
         <Footer />
       </BrowserRouter>

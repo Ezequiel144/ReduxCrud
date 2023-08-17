@@ -9,17 +9,19 @@ export default function OnlyEdit({title,descrip,textLarge}){
     let contentInfo;
      
     if(edit){
-        <p>hola</p>
         contentInfo = (
             <article className={styleOnly.contentOnly}>
                 <article className={styleOnly.contentEditor}>
-                    <p>titulo: {title}</p>
+                    <span className={styleOnly.textTitle}>titulo:</span>
+                    <p className={styleOnly.text}>{title}</p>
                 </article>    
                 <article className={styleOnly.contentEditor}>
-                    <p>decrip: {descrip}</p>
+                    <span className={styleOnly.textTitle}>decrip:</span>
+                    <p className={styleOnly.text}>{descrip}</p>
                 </article>
                 <article className={styleOnly.contentEditor}>
-                    <p className={styleOnly.text}>texto largo: {textLarge}</p>
+                    <span className={styleOnly.textTitle}>texto largo:</span>
+                    <p className={styleOnly.text}>{textLarge}</p>
                 </article>
                 
                 <button className={styleOnly.boton} onClick={()=>{setEdit(false)}}>editar</button>
@@ -28,14 +30,14 @@ export default function OnlyEdit({title,descrip,textLarge}){
         )
     }else{
         contentInfo = (
-            <article className={styleOnly.contentOnly}>    
+            <article className={styleOnly.contentOnly} style={{width:'400px',margin:'auto'}}>    
                 <article className={styleOnly.contentEditor}>
                     <p className={styleOnly.textTitle}>titulo:</p>
-                    <input className={styleOnly.inputData} type="text" />
+                    <input className={styleOnly.inputData} maxLength={20} type="text" />
                 </article>    
                 <article className={styleOnly.contentEditor}>
                     <p className={styleOnly.textTitle}>decrip:</p>
-                    <input className={styleOnly.inputData} type="text" />
+                    <input className={styleOnly.inputData} maxLength={30} type="text" />
                 </article>
                 <article className={styleOnly.contentEditor}>
                     <p className={styleOnly.textTitle}>texto largo:</p>

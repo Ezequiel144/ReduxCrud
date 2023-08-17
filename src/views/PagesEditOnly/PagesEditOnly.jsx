@@ -15,7 +15,7 @@ export default function PagesEditOnly(){
         setTask(task.find(item=>item.id === parseInt(idmod)))
     },[idmod])
 
-    console.log(task);
+    /* console.log(task); */
 
     return(
         <section className={styleOnly.contentEdit}>

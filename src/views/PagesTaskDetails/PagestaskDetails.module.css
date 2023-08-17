@@ -60,8 +60,31 @@
 }
 
 .textLarge{
-    /* border: 1px solid red; */
-    width: 500px;
+    word-wrap: break-word;
+    width: 100%;
     padding: 2px 0;
     font-size: 1.2rem;
+    height: fill;
+}
+
+.buttonDelete{
+    text-decoration: none;
+    margin: 10px auto;
+    display: block;
+    width: 100px;
+    cursor: pointer;
+    padding: 3px 5px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #F34213;
+    color: white;
+    font-family: 'roboto';
+    font-size: 0.9rem;
+    transition: .3s all;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.buttonDelete:hover{
+    transform: scale(1.2);
 }

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import styleDetails from "./PagestaskDetails.module.css"
-import { useSelector } from "react-redux"; 
+import { useSelector,useDispatch } from "react-redux"; 
+import { deleteTask } from "../../redux-toolkit/features/tasks/TaskSlice";
 
 export default function PagesTaskDetails(){
     const {idtask} = useParams();
@@ -11,14 +12,14 @@ export default function PagesTaskDetails(){
     
     useEffect(()=>{
         setTask(task.find(t => t.id === parseInt(idtask)))
-        console.log("ID Tarea: ", idtask)
     },[idtask]);
 
     
 
     return(
         <section className={styleDetails.contentDetails}>
-            <Details 
+            <Details
+                id={task.id}
                 title={task.title}
                 descrip={task.descrip}
                 textLarge={task.textLarge}
@@ -28,9 +29,19 @@ export default function PagesTaskDetails(){
     )
 }
 
-function Details({title,descrip,textLarge,img}){
+function Details({id,title,descrip,textLarge,img}){
+
+    const dispatch = useDispatch();    
+
+    const navegate = useNavigate();
+
+    function handleDelete(id){
+        dispatch(deleteTask(id));
+        navegate('/');
+    }
+
     return(
-        <section>
+        <section className={styleDetails.contentDetails2}>
             <article className={styleDetails.contentTitleDescrip}>
                 <h1 className={styleDetails.title}>{title}</h1>
                 <p className={styleDetails.descrip}>{descrip}</p>
@@ -41,7 +52,7 @@ function Details({title,descrip,textLarge,img}){
                 </section> */}
                 <p className={styleDetails.textLarge}>{textLarge}</p>
             </article>
-
+            <button className={styleDetails.buttonDelete} onClick={() => handleDelete(id)}>Delete</button>
         </section>
     )
 }
