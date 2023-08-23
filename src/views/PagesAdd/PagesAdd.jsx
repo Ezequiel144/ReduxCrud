@@ -28,13 +28,6 @@ function Formulary(){
             },
         )
     }
-    /* const initialForm = {
-        id: null,title:"", descrip:'',textLarge:''
-    }
-
-    const { formState, handleChange } = useForm(initialForm);
-
-    const { title,descrip,textLarge } = formState; */
 
     const dispatch = useDispatch();
 
