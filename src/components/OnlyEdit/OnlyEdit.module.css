@@ -16,12 +16,17 @@
     margin: auto;
 }
 
+.contentOnlycont{
+    transition: 1s;
+}
+
 .contentEditor{
     display: flex;
     flex-direction: row;
     column-gap: 10px;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
 

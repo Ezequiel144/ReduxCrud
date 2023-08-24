@@ -13,7 +13,13 @@ const TaskSlice = createSlice({
             return state.filter(t => t.id !== action.payload);
         },
         editTask: (state,action) => {
-            console.log(action.payload);
+            const {id,title,descrip,textLarge} = action.payload;
+            const foundTask = state.find(t => t.id === id);
+            if(foundTask){
+                foundTask.title = title;
+                foundTask.descrip = descrip;
+                foundTask.textLarge = textLarge;
+            }
         }
     }
 });
