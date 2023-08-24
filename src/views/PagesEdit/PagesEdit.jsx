@@ -1,3 +1,4 @@
+import Empty from "../../components/Empty/Empty";
 import TaskEdit from "../../components/TaskEdit/TaskEdit";
 import styleEdit from "./PagesEdit.module.css";
 import { useSelector } from "react-redux/es/hooks/useSelector";
@@ -13,14 +14,15 @@ export default function PagesModificar(){
             <h1 className={styleEdit.title}>Modificar</h1>
             <article className={styleEdit.contentTaskEdit}>
                 {
-                    stateTask.map(date => {
-                        return(<TaskEdit
-                            key={date.id} 
-                            title={date.title}
-                            descrip={date.descrip}
-                            id={date.id}
-                        />)
-                    })
+                    stateTask.length ?
+                        (stateTask.map(date => {
+                            return(<TaskEdit
+                                key={date.id} 
+                                title={date.title}
+                                descrip={date.descrip}
+                                id={date.id}
+                            />)
+                        })) : <Empty />
                 }
             </article>
         </section>
